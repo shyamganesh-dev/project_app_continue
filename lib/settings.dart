@@ -56,6 +56,28 @@ class _SettingsState extends State<Settings> {
         )
     ),
           ),
+          Container(
+            width: heights.width*1,
+            color: Colors.white,
+            child: ListTile(
+                title: Text("Do not disturb"),
+                trailing: FlutterSwitch(
+                  width: 100.0,
+                  height: 55.0,
+                  toggleSize: 45.0,
+                  value: status,
+                  borderRadius: 30.0,
+                  padding: 8.0,
+                  showOnOff: true,
+                  onToggle: (val) {
+                    setState(() {
+                      status = val;
+                    });
+                  },
+                )
+            ),
+          ),
+
         ],
       ),
     );
