@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_app_continue/bar.dart';
+import '././editpage.dart';
 import 'package:simple_timer/simple_timer.dart';
 
 
@@ -20,7 +21,6 @@ class _MyHomePageState extends State<MyHomePage>
   TimerStyle _timerStyle = TimerStyle.ring;
   TimerProgressIndicatorDirection _progressIndicatorDirection = TimerProgressIndicatorDirection.clockwise;
   TimerProgressTextCountDirection _progressTextCountDirection = TimerProgressTextCountDirection.count_down;
-
 
   @override
   void initState() {
@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage>
                     height: heights.height*0.5,
                     margin: EdgeInsets.symmetric(vertical: 10),
                     child: SimpleTimer(
-                      duration: const Duration(seconds: 09),
+                      duration: const Duration(seconds: 40),
                       controller: _timerController,
                       displayProgressText: true,
                       timerStyle: _timerStyle,
@@ -258,7 +258,6 @@ class _MyHomePageState extends State<MyHomePage>
   }
 
   void timerValueChangeListener(Duration timeElapsed) {
-
   }
 
   void handleTimerOnStart() {

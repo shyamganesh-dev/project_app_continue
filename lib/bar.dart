@@ -23,10 +23,42 @@ class Bar {
       ),
     ],
   );
+
+
+  AppBar appbars= AppBar(
+    backgroundColor: Colors.white,
+    leading: IconButton(
+      onPressed: (){
+        Navigator.pop(context);
+      },
+      icon: Icon(Icons.arrow_back,color: Colors.black,),
+    ),
+    centerTitle: true,
+    title: Text("Evaluation ",style: TextStyle(
+      color: Colors.black,
+    ),
+    ),
+    actions: [
+      Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Text("Settings",style: TextStyle(
+          color: Colors.blueAccent,
+          fontSize: 20,
+        ),
+        ),
+      ),
+    ],
+  );
+  String out = "Does your outline form follow this example?";
+  List <String> numbers= ["1","2","3","4","5","6","7"];
+
+
   String texts = "   Class 1 Amalgam Cavity";
-  Color purp =  Color(0xff4667EE) ;
+  Color purp =  Color(0xff4667EE);
+  Color back = Color(0xffF1F1F1);
   Color oran= Color(0xffE55C4F);
   Color yello = Color(0xffF79703);
+  List<String> settings  = ["Do Not Disturb","Stop Alarm Tone","Vibration","Active Timer Screen",];
 
   static BuildContext get context => null;
 

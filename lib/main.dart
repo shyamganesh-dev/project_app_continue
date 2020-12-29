@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
+import 'package:project_app_continue/Evaluationscreen/firstquestion.dart';
 import './bar.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 import './editpage.dart';
@@ -9,7 +10,7 @@ import "package:f_datetimerangepicker/f_datetimerangepicker.dart";
 
 void main()=> runApp(
     MaterialApp(
-        home: Settings(),
+        home: Firstque(), //Settings(),
     ),
 );
 

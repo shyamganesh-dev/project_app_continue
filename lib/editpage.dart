@@ -1,12 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project_app_continue/bar.dart';
-import 'package:project_app_continue/main.dart';
+import 'package:simple_timer/simple_timer.dart';
+import './bar.dart';
+import '././dialogscreen.dart';
+import './main.dart';
 
 
-class Edit extends StatelessWidget {
+class Edit extends StatefulWidget {
+  @override
+  _EditState createState() => _EditState();
+}
+
+class _EditState extends State<Edit> {
+  TimerController _timerController;
   @override
   Widget build(BuildContext context) {
+    var vars;
     final heights =MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
@@ -79,7 +88,11 @@ class Edit extends StatelessWidget {
               ),
               SizedBox(width: heights.width*0.3,),
               GestureDetector(
-                  onTap: (){},
+                  onTap: (){
+                    setState(() {
+                     vars= _timerController.start;
+                    });
+                  },
                   child:LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
                     return CircleAvatar(
                         radius: 40,
@@ -88,7 +101,6 @@ class Edit extends StatelessWidget {
                         )
                     );
                   },)
-
               ),
             ],
           ),
