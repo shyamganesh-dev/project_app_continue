@@ -17,25 +17,6 @@ class _FirstqueState extends State<Firstque> {
   Widget build(BuildContext context) {
     final heights = MediaQuery.of(context).size;
     CarouselController buttonCarouselController = CarouselController();
-    List <Widget> sli= [
-      Container(
-      width: heights.width*1,
-      height: heights.height*.3,
-      color: Colors.greenAccent,
-      // child: Image.network("https://images.pexels.com/photos/3881449/pexels-photo-3881449.jpeg"),
-    ),
-      Container(
-      width: heights.width*1,
-      height: heights.height*.3,
-      color: Colors.yellowAccent,
-      // child: Image.network("https://images.pexels.com/photos/3881449/pexels-photo-3881449.jpeg"),
-    ),Container(
-      width: heights.width*1,
-      height: heights.height*.3,
-      color: Colors.deepOrange,
-      // child: Image.network("https://images.pexels.com/photos/3881449/pexels-photo-3881449.jpeg"),
-    )
-      ,];
     return SafeArea(
       child: Scaffold(
         backgroundColor: Bar().back,
@@ -48,8 +29,9 @@ class _FirstqueState extends State<Firstque> {
             ),
             SizedBox(
               width: heights.width*0.6,
-              child: Text("Criteria: Outline form Shape",style: TextStyle(
+              child: Text("    Criteria: Outline form Shape",style: TextStyle(
                 fontSize: 17,
+                fontWeight: FontWeight.bold,
               ),),
             ),
            SizedBox(
@@ -93,14 +75,34 @@ class _FirstqueState extends State<Firstque> {
               width: heights.width*1,
               height: heights.height*0.05,
               color: Colors.black12,
-              child: Center(child: Text("Q.1/09",style: TextStyle(
-                fontSize: 20,
-              ),)),
+              child: Center(
+                child:RichText(
+                  text: TextSpan(
+                    children:<TextSpan> [
+                      TextSpan(
+                        text: "Q.1/",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "09",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
             SizedBox(
               height: heights.height*0.05,
             ),
-            Text(Bar().out,style: TextStyle(fontSize:18 ),),
+            Text(Bar().out,style: TextStyle(fontSize:18 ,fontWeight: FontWeight.bold,),),
             SizedBox(
               height: heights.height*0.02,
             ),
@@ -118,7 +120,10 @@ class _FirstqueState extends State<Firstque> {
                         cool=Bar().purp;
                       });
                     },
-                    child: Text("Yes"),
+                    child: Text("Yes",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                    ),
                   ),
                 ),
                 Container(
@@ -132,7 +137,9 @@ class _FirstqueState extends State<Firstque> {
                         cool=Bar().purp;
                       });
                     },
-                    child: Text("No"),
+                    child: Text("No",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),),
                   ),
                 ),
               ],

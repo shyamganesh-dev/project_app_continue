@@ -41,8 +41,8 @@ class Bar {
     actions: [
       Padding(
         padding: const EdgeInsets.all(15.0),
-        child: Text("Settings",style: TextStyle(
-          color: Colors.blueAccent,
+        child: Text("Submit",style: TextStyle(
+          color: Colors.grey,
           fontSize: 20,
         ),
         ),
@@ -50,7 +50,7 @@ class Bar {
     ],
   );
   String out = "Does your outline form follow this example?";
-  List <String> numbers= ["1","2","3","4","5","6","7"];
+  String adj ="Adjacent tooth damage Soft tissue damage \nBurn marks on the tooth?";
 
 
   String texts = "   Class 1 Amalgam Cavity";

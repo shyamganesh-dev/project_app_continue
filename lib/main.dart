@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:project_app_continue/Evaluationscreen/firstquestion.dart';
+import '././EvaluationScreen/secondquestion.dart';
 import './bar.dart';
 import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 import './editpage.dart';
@@ -10,7 +11,9 @@ import "package:f_datetimerangepicker/f_datetimerangepicker.dart";
 
 void main()=> runApp(
     MaterialApp(
-        home: Firstque(), //Settings(),
+        home: SecondQuestion(),
+      //Firstque(),<= 1st question page
+      // Settings(),
     ),
 );
 
@@ -24,7 +27,8 @@ class Dialogs extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,),onPressed: (){},
+          leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.black,),
+            onPressed: (){},
           ),
           centerTitle: true,
           title: Text("Exercise Timer",style:TextStyle(color: Colors.black,
