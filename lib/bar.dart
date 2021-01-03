@@ -59,6 +59,7 @@ class Bar {
   Color back = Color(0xffF1F1F1);
   Color oran= Color(0xffE55C4F);
   Color yello = Color(0xffF79703);
+  Color greys= Color(0xffEFEFEF);
   List<String> settings  = ["Do Not Disturb","Stop Alarm Tone","Vibration","Active Timer Screen",];
 
   static BuildContext get context => null;

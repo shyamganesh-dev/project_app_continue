@@ -4,6 +4,7 @@ import 'package:simple_timer/simple_timer.dart';
 import './bar.dart';
 import '././dialogscreen.dart';
 import './main.dart';
+import 'dialogss.dart';
 
 
 class Edit extends StatefulWidget {
