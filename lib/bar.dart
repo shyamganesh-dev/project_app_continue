@@ -54,6 +54,7 @@ class Bar {
 
 
   String texts = "   Class 1 Amalgam Cavity";
+  Color gree= Color(0xff4CAF50);
   Color purp =  Color(0xff4667EE);
   Color back = Color(0xffF1F1F1);
   Color oran= Color(0xffE55C4F);
@@ -61,6 +62,16 @@ class Bar {
   List<String> settings  = ["Do Not Disturb","Stop Alarm Tone","Vibration","Active Timer Screen",];
 
   static BuildContext get context => null;
+
+  AppBar result= AppBar(
+    title: Text("View Result"),
+    centerTitle: true,
+    leading: IconButton(
+      onPressed: (){},
+      icon: Icon(Icons.backspace,color: Colors.black,),
+    ),
+  );
+
 
   //get => appbars = _appBar;
 }
