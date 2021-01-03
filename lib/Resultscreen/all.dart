@@ -52,7 +52,11 @@ class Tabshyam extends StatelessWidget {
             Expanded(
               child: TabBarView(
                 children: [
-                  Icon(Icons.directions_car),
+                  Container(
+                    width: heights.width*0.1,
+                      height: heights.height*0.3,
+                      child: Image.network("https://images.pexels.com/photos/21696/pexels-photo.jpg")
+                  ),
                   All(),
 
                 ],
@@ -84,7 +88,6 @@ class _AllState extends State<All> {
     bool checkedValue = false;
     return Column(
       children: [
-        SizedBox(height: heights.height*0.08,),
         Container(
           width: heights.width*1,
           margin: EdgeInsets.all(3),
@@ -93,9 +96,9 @@ class _AllState extends State<All> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Checkbox(
-                value: true,
+                value: true ,
                 activeColor: Bar().purp,
-                onChanged: (value){
+                onChanged: (bool value){
                   setState(() {
                     checkedValue = value;
                   });
@@ -103,9 +106,10 @@ class _AllState extends State<All> {
               ),
               Text("All"),
               //2
-              Checkbox(value: false,
+              Checkbox(
+                value: checkedValue,
                 activeColor: Bar().purp,
-                onChanged: (value){
+                onChanged: (bool value){
                   setState(() {
                     checkedValue = value;
                   });
@@ -152,7 +156,8 @@ class _AllState extends State<All> {
               //margin: const EdgeInsets.all(5.0),
               //padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
-                  border: (correct < incorrect) ? Border.all(color: Bar().gree) :(Border.all(color: Bar().oran)),
+                  border: Border.all(color: Bar().gree),
+                //border: (correct < incorrect) ? Border.all(color: Bar().gree) :(Border.all(color: Bar().oran)),
               ),
               child: Center(child: Text(numberss[i],style: TextStyle(fontSize: 18),)),
             );

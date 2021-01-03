@@ -23,7 +23,8 @@ import 'Resultscreen/all.dart';
 
 void main()=> runApp(
     MaterialApp(
-        home: Tabshyam(),//Viewsolution(),
+        home: Tabshyam(),//<= It contain tab bar view
+      // Viewsolution(),
       //Result()
       // VideoApp()
      // Success(),
